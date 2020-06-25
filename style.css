@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins, sans-serif;
+    background: black;
+}
+#name{
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+#clock{
+    height: 400px;
+    width: 400px;
+    bottom: 50%;
+    background-color: #b4f1f1;
+    margin: auto;
+    border-radius: 50%;
+    border: 10px solid #21b1c7;
+    position: relative;
+    margin: 100px auto;
+}
+#clock::before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: goldenrod;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+    border: 2px solid #b4f1f1;
+    margin-left: -10px;
+    margin-bottom: -9px;
+    z-index: 4;
+}
+.number{
+    --rot: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    transform: rotate(var(--rot));
+}
+#one{--rot: 30deg;}
+#two{--rot: 60deg}
+#three{--rot: 90deg}
+#four{--rot: 120deg}
+#five{--rot: 150deg}
+#six{--rot: 180deg}
+#seven{--rot: 210deg}
+#eight{--rot: 240deg}
+#nine{--rot: -90deg}
+#ten{--rot: -60deg}
+#eleven{--rot: -30deg}
+#one::before{
+    content: "1";
+    transform: rotate(-30deg);
+}
+#two::before{
+    content: "2";
+    transform: rotate(-60deg);
+}
+#three::before{
+    content: "3";
+    transform: rotate(-90deg);
+}
+#four::before{
+    content: "4";
+    transform: rotate(-120deg);
+}
+#five::before{
+    content: "5";
+    transform: rotate(-150deg);
+}
+#six::before{
+    content: "6";
+    transform: rotate(-180deg);
+}
+#seven::before{
+    content: "7";
+    transform: rotate(-210deg);
+}
+#eight::before{
+    content: "8";
+    transform: rotate(-240deg);
+}
+#nine::before{
+    content: "9";
+    transform: rotate(90deg);
+}
+#ten::before{
+    content: "10";
+    transform: rotate(60deg);
+}
+#eleven::before{
+    content: "11";
+    transform: rotate(30deg);
+}
+#hour-hand-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#hr-hand{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    height: 105px;
+    width: 10px;
+    background-color: rgb(6, 122, 78);
+    margin-left: -5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+#minute-hand-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#min-hand{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 6px;
+    height: 135px;
+    background-color: rgb(6, 122, 78);
+    margin-left: -3px;
+    border-radius: 3px;
+    z-index: 2;
+}
+#second-hand-container{
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+#sec-hand{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 2px;
+    height: 160px;
+    background-color: red; 
+    margin-left: -1px;
+    border-radius: 1px;  
+    z-index: 3;
+}
